@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fruit_hub_dashboard/core/utilies/custome_app_bar.dart';
+import 'package:fruit_hub_dashboard/features/add_product/presentation/views/widgets/custome_app_bar.dart';
 import 'package:fruit_hub_dashboard/features/add_product/presentation/views/widgets/add_product_view_body.dart';
 
 class AddProductView extends StatelessWidget {
