@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fruit_hub_dashboard/features/add_product/presentation/views/widgets/custome_text_form_field.dart';
 
 class AddProductViewBody extends StatefulWidget {
   const AddProductViewBody({super.key});
@@ -12,11 +13,38 @@ class _AddProductViewBodyState extends State<AddProductViewBody> {
   AutovalidateMode autovalidateMode = AutovalidateMode.disabled;
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Form(
-        key: _formKey,
-        autovalidateMode: autovalidateMode,
-        child: const Column(),
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 16.0),
+      child: SingleChildScrollView(
+        child: Form(
+          key: _formKey,
+          autovalidateMode: autovalidateMode,
+          child: const Column(
+            children: [
+              CustomeTextFormField(
+                hintText: "Product Name",
+                textInputType: TextInputType.text,
+              ),
+              SizedBox(height: 16),
+
+              CustomeTextFormField(
+                hintText: "Product Price",
+                textInputType: TextInputType.number,
+              ),
+              SizedBox(height: 16),
+              CustomeTextFormField(
+                hintText: "Product Code",
+                textInputType: TextInputType.number,
+              ),
+              SizedBox(height: 16),
+              CustomeTextFormField(
+                hintText: "Product Description",
+                textInputType: TextInputType.text,
+                maxLines: 5,
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
