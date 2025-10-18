@@ -11,7 +11,7 @@ class IsFeaturedCheckBox extends StatelessWidget {
     return Row(
       children: [
         CustomeCheckBox(onChanged: onChanged),
-        SizedBox(width: 16),
+        Expanded(child: SizedBox(width: 16)),
         //Checkbox(value: false, onChanged: (value) {}),
         Expanded(
           child: Text.rich(
@@ -25,7 +25,7 @@ class IsFeaturedCheckBox extends StatelessWidget {
                 ),
               ],
             ),
-            textAlign: TextAlign.start,
+            textAlign: TextAlign.right,
           ),
         ),
       ],
